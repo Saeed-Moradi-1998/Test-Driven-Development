@@ -22,5 +22,8 @@ public class MyStringTest {
         assertEquals(null,MyString.replace(null, "hello", "world"));
         assertEquals(null,MyString.replace("hello world", null, "world"));
         assertEquals(null,MyString.replace("hello world", "hello", null));
+
+        // This test case checks the output when s1 is empty.
+        assertEquals("world",MyString.replace("hello world", "", "world"));
     }
 }
