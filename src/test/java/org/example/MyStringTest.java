@@ -21,5 +21,6 @@ public class MyStringTest {
         // These test cases are for checking the output if either of the strings are null.
         assertEquals(null,MyString.replace(null, "hello", "world"));
         assertEquals(null,MyString.replace("hello world", null, "world"));
+        assertEquals(null,MyString.replace("hello world", "hello", null));
     }
 }
