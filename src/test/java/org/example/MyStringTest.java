@@ -14,4 +14,10 @@ public class MyStringTest {
         // This test checks if s2 can be found in s1.
         assertEquals(6, MyString.indexOfString("hello world", "world", 0));
     }
+
+    @Test
+    public void testReplace() { // Testing the method replace.
+
+        assertEquals(null,MyString.replace(null, "hello", "world"));
+    }
 }

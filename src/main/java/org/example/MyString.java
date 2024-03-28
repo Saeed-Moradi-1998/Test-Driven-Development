@@ -28,4 +28,9 @@ public class MyString {
         // If s2 is not found in s1, return -1
         return -1;
     }
+
+    public static String replace(String s, String s1, String s2) {
+        return ""; // This is the initial implementation of the method which returns empty string.
+    }
+
 }
