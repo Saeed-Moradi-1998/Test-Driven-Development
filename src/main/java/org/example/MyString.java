@@ -40,8 +40,15 @@ public class MyString {
             return s2;
         }
 
+        // Replace all occurrences of s1 with s2 in s using indexOfString method
+        int pos = 0;
+        while ((pos = indexOfString(s, s1, pos)) != -1) {
+            s = s.substring(0, pos) + s2 + s.substring(pos + s1.length());
+            // Move pos after the replaced part to avoid infinite loop
+            pos += s2.length();
+        }
 
-        return ""; // This is the initial implementation of the method which returns empty string.
+        return s; // Returning the modified string.
     }
 
 }
