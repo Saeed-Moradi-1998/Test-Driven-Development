@@ -25,5 +25,8 @@ public class MyStringTest {
 
         // This test case checks the output when s1 is empty.
         assertEquals("world",MyString.replace("hello world", "", "world"));
+
+        // This test cae checks s2 can be replaced with s1 in s.
+        assertEquals("Hello Saeed",MyString.replace("Hello world", "world", "Saeed"));
     }
 }
