@@ -29,7 +29,7 @@ public class MyString {
         return -1;
     }
 
-    public static String replace(String s, String s1, String s2) {
+    public static String replace(String s, String s1, String s2, int pos) {
 
         if (s == null || s1 == null || s2 == null) { // Check if any of the strings are null
             return null;
@@ -41,14 +41,14 @@ public class MyString {
         }
 
         // Replace all occurrences of s1 with s2 in s using indexOfString method
-        int pos = 0;
-        while ((pos = indexOfString(s, s1, pos)) != -1) {
-            s = s.substring(0, pos) + s2 + s.substring(pos + s1.length());
-            // Move pos after the replaced part to avoid infinite loop
-            pos += s2.length();
+        while (pos != -1) {
+            if (pos + s1.length() <= s.length()){
+                s = s.substring(0, pos) + s2 + s.substring(pos + s1.length());
+                // Move pos after the replaced part to avoid infinite loop
+                pos += s2.length();
+            }
         }
 
         return s; // Returning the modified string.
     }
-
 }
