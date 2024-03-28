@@ -18,6 +18,7 @@ public class MyStringTest {
     @Test
     public void testReplace() { // Testing the method replace.
 
+        // These test cases are for checking the output if either of the strings are null.
         assertEquals(null,MyString.replace(null, "hello", "world"));
     }
 }
